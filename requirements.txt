@@ -1,4 +1,4 @@
-discord.py==2.3.2
+discord.py
 python-dotenv==1.0.0
 apscheduler==3.10.1
 pytz==2025.2
