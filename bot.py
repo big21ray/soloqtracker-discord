@@ -64,7 +64,12 @@ async def on_ready():
     print(f"{bot.user} has connected to Discord!")
     # Start the scheduler only once — run daily at 11:00 Europe/Paris
     if not scheduler.running:
-        scheduler.add_job(send_daily_message, CronTrigger(hour=11, minute=0))
+        scheduler.add_job(
+            send_daily_message,
+            CronTrigger(hour=11, minute=0),
+            id="soloq_report",
+            replace_existing=True,
+        )
         scheduler.start()
 
 
