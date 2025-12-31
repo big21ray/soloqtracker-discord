@@ -1,0 +1,15 @@
+.env
+*.ipynb
+data/riot_account_cache.json
+# Ignore local virtualenv
+.venv/
+venv/
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore dotenv local overrides
+.env.local
+
+# Ignore any JSON caches or secret files
+data/*.json
