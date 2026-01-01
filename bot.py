@@ -81,7 +81,7 @@ async def on_ready():
     if not scheduler.running:
         scheduler.add_job(
             send_daily_message,
-            CronTrigger(hour=12, minute=00, timezone=paris_tz),
+            CronTrigger(hour=12, minute=5, timezone=paris_tz),
             # CronTrigger(minute="*/2"),
             id="soloq_report",
             replace_existing=True,
