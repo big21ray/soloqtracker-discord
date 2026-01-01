@@ -82,7 +82,7 @@ async def on_ready():
         scheduler.add_job(
             send_daily_message,
             # CronTrigger(hour=11, minute=41),
-            minute="*/2",
+            CronTrigger(minute="*/2"),
             id="soloq_report",
             replace_existing=True,
         )
